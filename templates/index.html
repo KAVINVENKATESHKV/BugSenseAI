@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BugSense AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<hr>
+
+<center>
+<p>
+© 2026 BugSense AI | Developed by Kavin Venkatesh
+</p>
+</center>
+<body>
+    <div id="loading" style="display:none;">
+    🤖 AI is analyzing your bug...
+</div>
+
+<div class="container">
+
+    <h1>🐞 BugSense AI</h1>
+
+    <h2>AI Powered Bug Priority Prediction</h2>
+    <p style="color:gray;">
+This system uses Google Gemini AI to analyze software bug reports,
+predict their priority, suggest the responsible team, and estimate the fixing time.
+</p>
+
+    <p>
+        Analyze software bug reports using Artificial Intelligence
+        and instantly predict their priority.
+    </p>
+
+    <form action="/predict" method="POST">
+
+        <label>Bug Title</label><br>
+        <input type="text" name="title" placeholder="Enter Bug Title" required>
+
+        <br><br>
+
+        <label>Bug Description</label><br>
+
+        <textarea
+        name="description"
+        rows="8"
+        placeholder="Describe your software bug here..."
+        required></textarea>
+
+        <br><br>
+
+        <button type="submit">
+            Predict Priority
+        </button>
+
+    </form>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>AI Prediction Result</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>🤖 AI Bug Analysis Report</h1>
+
+    <hr>
+
+    <h2>🐞 Bug Title</h2>
+    <div class="card">
+        {{ title }}
+    </div>
+
+    <h2>📝 Bug Description</h2>
+    <div class="card">
+        {{ description }}
+    </div>
+
+    <h2>🧠 AI Prediction</h2>
+    <div class="card">
+<div class="card">
+<pre style="white-space: pre-wrap; font-size:16px;">
+{{ prediction }}
+</pre>
+</div>
+    </div>
+
+    <br>
+
+    <a href="/">
+        <button>⬅ Analyze Another Bug</button>
+    </a>
+
+</div>
+
+</body>
+
+</html>
